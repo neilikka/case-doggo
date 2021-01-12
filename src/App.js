@@ -10,16 +10,18 @@ import Maintenances from './components/Maintenances';
 import Error from './components/Error';
 import Search from './components/Search';
 import Navigation from './components/Navigation';
-//import SideNavigation from './components/SideNavigation';
+import SideNavigation from './components/SideNavigation';
 import BottomBar from './components/BottomBar';
 import ScrollToTop from './components/ScrollToTop';
 
 class App extends Component {
   render() {
     return (  
-      <div class="container">
+      <div>
+        <SideNavigation /> 
+      <div class="container">      
         <BrowserRouter>
-        <ScrollToTop />
+        <ScrollToTop />       
         <div>
           <Navigation />
             <Switch>
@@ -33,13 +35,11 @@ class App extends Component {
             <Route component={Error}/>
            </Switch>
         </div>
-        {/* <div>
-          <SideNavigation />
-        </div>  */}
         <div>
           <BottomBar />
         </div>   
       </BrowserRouter>
+      </div>
       </div>
     );
   }

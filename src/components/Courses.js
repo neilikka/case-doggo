@@ -38,7 +38,7 @@ const popular = [
         name: 'Physical exercises with dogs',
         image: image4,
         tag: 'online',
-        text: 'This course tell you how you can keep both you and your dog fit physically. Doing push-ups, sit-ups, balance training and stretching together is fun for both you and your dog. Included exercises ...',
+        text: 'This course tell you how you can keep both you and your dog fit physically. Doing push-ups, sit-ups, balance training and stretching together is fun for both you and your dog. Included ...',
         url: '/error'
     }
 ]
