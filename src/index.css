@@ -49,7 +49,7 @@ body{
     height: 15rem; 
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
     .card-big {
       width: 20rem;
       height: 22rem;
@@ -326,8 +326,97 @@ hr {
     background-color: var(--grey-light);
  }
 
- .menu {
-     width: 12rem;
+ .sidebar {
+     width: 10rem;
      background-color: var(--main-1-light);
      position: fixed;
+     z-index: 1100;
  }
+
+
+ .sidebar-link {
+    color:black;
+    display: block;
+    padding: 0rem 2rem;
+ }
+
+ a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+
+ .bar-top {
+    width: 55rem;
+    margin: 0 0 0 auto;
+ }
+
+/* footer */
+
+.footer {
+    background-color: var(--main-1-dark);
+}
+
+.footer-title {
+    font-weight: bold;
+    margin-bottom: 1rem; 
+    margin-top: 1rem;    
+}
+
+ul.footer { 
+    list-style: none; 
+    padding-left: 1rem;
+    list-style-position: outside;
+}
+
+ul.footer>li {
+    list-style-position: inside;
+    text-indent: -0.5rem;
+    padding-left: 1rem;
+}
+
+ul.footer>li>a {
+    color: black;
+    font-weight: normal;
+}
+
+ul.footer>li>a:hover {
+    color: var(--main-2-dark);
+    font-weight: 500;
+}
+
+li.hours-title {
+    margin-bottom: 0.2rem;;
+}
+
+.footer-icon {
+    margin-right: 0.5rem;
+}
+
+.scrollTop {
+    position: fixed; 
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: var(--grey-dark);
+    bottom: 2rem;
+    margin-left: 75%;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+    animation: fadeIn 0.3s;
+    transition: opacity 0.4s;
+    opacity: 0.5;
+  }
+  
+  .scrollTop:hover{
+    opacity: 1;
+  }

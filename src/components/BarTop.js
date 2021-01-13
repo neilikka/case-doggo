@@ -10,9 +10,9 @@ import {
 import {LinkContainer} from 'react-router-bootstrap'
 import logo from '../images/icons/logo.png';
 
-const Navigation = () => {
+const BarTop = () => {
     return (
-        <div class="sticky-top">
+        <div class="sticky-top bar-top">
             <Navbar variant="light" expand="lg" sticky-top>
                 <Navbar.Brand href="/">
                     <img src={logo}
@@ -22,8 +22,7 @@ const Navigation = () => {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto">
-
+                    {/* <Nav className="mr-auto">
                         <LinkContainer to="/">
                             <Nav.Link>Front page</Nav.Link>
                         </LinkContainer>
@@ -51,8 +50,8 @@ const Navigation = () => {
                             <NavDropdown.Divider/>
                             <NavDropdown.Item href="/error">Separated link</NavDropdown.Item>
                         </NavDropdown>
-                    </Nav>
-                    <div class="input-group mb-3 search-top">
+                    </Nav> */}
+                    <div class="input-group mb-3 ml-auto search-top">
                         <input type="text" class="form-control" placeholder="Search..." aria-label="search" aria-describedby="basic-addon2"/>
                         <div class="input-group-append">
                             <a href="/search">
@@ -74,4 +73,4 @@ const Navigation = () => {
     );
 }
 
-export default Navigation;
+export default BarTop;

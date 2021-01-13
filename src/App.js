@@ -9,37 +9,53 @@ import About from './components/About';
 import Maintenances from './components/Maintenances';
 import Error from './components/Error';
 import Search from './components/Search';
-import Navigation from './components/Navigation';
-import SideNavigation from './components/SideNavigation';
-import BottomBar from './components/BottomBar';
+import BarTop from './components/BarTop';
+import BarSide from './components/BarSide';
+import BarBottom from './components/BarBottom';
 import ScrollToTop from './components/ScrollToTop';
+import ArrowToTop from './components/ArrowToTop';
 
 class App extends Component {
   render() {
     return (  
       <div>
-        <SideNavigation /> 
-      <div class="container">      
-        <BrowserRouter>
-        <ScrollToTop />       
-        <div>
-          <Navigation />
-            <Switch>
-             <Route path="/" component={FrontPage} exact/>
-             <Route path="/blogs" component={Blogs}/>
-             <Route path="/courses" component={Courses}/>
-             <Route path="/privatelessons" component={PrivateLessons}/>
-             <Route path="/maintenances" component={Maintenances}/>
-             <Route path="/about" component={About}/>
-             <Route path="/search" component={Search}/>             
-            <Route component={Error}/>
-           </Switch>
+        {/* <BrowserRouter>
+          <BarSide /> 
+          <Switch>
+              <Route path="/" component={FrontPage} exact/>
+              <Route path="/blogs" component={Blogs}/>
+              <Route path="/courses" component={Courses}/>
+              <Route path="/privatelessons" component={PrivateLessons}/>
+              <Route path="/maintenances" component={Maintenances}/>
+              <Route path="/about" component={About}/>
+              <Route path="/search" component={Search}/>             
+              <Route component={Error}/>
+            </Switch>
+        </BrowserRouter> */}
+
+ 
+        
+        <div class="container">      
+          <BrowserRouter>
+            <ScrollToTop />       
+            <BarSide />
+            <BarTop />
+            <div id="move-this">
+            <Switch >
+              <Route path="/" component={FrontPage} exact/>
+              <Route path="/blogs" component={Blogs}/>
+              <Route path="/courses" component={Courses}/>
+              <Route path="/privatelessons" component={PrivateLessons}/>
+              <Route path="/maintenances" component={Maintenances}/>
+              <Route path="/about" component={About}/>
+              <Route path="/search" component={Search}/>             
+              <Route component={Error}/>
+            </Switch>
+            </div>
+            <BarBottom />
+            <ArrowToTop /> 
+          </BrowserRouter>
         </div>
-        <div>
-          <BottomBar />
-        </div>   
-      </BrowserRouter>
-      </div>
       </div>
     );
   }
